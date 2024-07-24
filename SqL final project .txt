@@ -116,10 +116,10 @@ select * from fees;
 ALTER TABLE customer add column age int;
 ALTER TABLE customer ADD CONSTRAINT CHK_Age CHECK (age<=28)
 
-INSERT NEW RECORD AFTER ALTER COLUMN:
+--INSERT NEW RECORD AFTER ALTER COLUMN:
 INSERT INTO customer (customer_id, customer_name,customer_mobile_num,purchase_date,branch_id,age) values (206,'gowtham','9876543132','2024-05-21',105,26);
 
-update age details:
+--update age details:
 
 update customer set age=19 where customer_id='201';
 update customer set age=18 where customer_id='202';
@@ -289,6 +289,8 @@ FROM branch as b,customer as c
 WHERE b.branch_id=c.branch_id
 GROUP BY b.branch_city
 HAVING COUNT(customer_id) > 0;
+
+
 
 SINGLE ROW FUNCTIONS
 
