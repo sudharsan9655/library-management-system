@@ -357,9 +357,6 @@ INNER JOIN book ON book.customer_id=customer.customer_id
 INNER JOIN return_detail ON return_detail.book_id=book.book_id
 INNER JOIN fees on fees.customer_id=customer.customer_id
 
-select * from library_master
-select * from library_master where branch_id='101'
-
 ----full join---
 select staff.branch_id,branch.branch_id,branch.branch_name,concat(staff_first_name,' ',staff_last_name) as staff_name from staff left join branch on staff.branch_id=branch.branch_id 
 union
